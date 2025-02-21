@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post">
+    <a href="{% url 'del_sc' sc_detail.id %}">delete school</a>
+    <a href="{% url 'update_f' sc_detail.id %}">update school</a>
+
+<a href="{% url 'index' %}">return to home</a>
+<h1>{{sc_detail.name}}</h1>
+<h3>{{sc_detail.country}}</h3>
+
+<img src="{{ sc_detail.file.url }}" alt="" height="50" width="50">
+<a href="{{ sc_detail.video.url }}">الملف</a>
+</form>
+{% endblock %}

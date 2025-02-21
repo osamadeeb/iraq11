@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<form action="" method = "post" enctype="multipart/form-data"> 
+    {% csrf_token %}
+{{form.as_p}}
+    <input type="submit">
+</form>
+
+{% for x in sc %}
+<a href="{% url 'mofasal' x.id %}"><h1>{{x.name}}</h1></a>
+<h3>{{x.country}}</h3>
+<img src="{{ x.file.url }}" alt="" height="50" width="50">
+  
+
+{% endfor %}
+
+</div>
+{% endblock %}
