@@ -1,0 +1,4 @@
+SELECT        ISNULL(MAX(cust_code), 0) + 1 AS cust_code
+FROM            cust_tbl
+
+https://www.youtube.com/watch?v=QcCISY-OOeU
